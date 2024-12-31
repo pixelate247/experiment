@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment</title>
+    <style>
+        #empty {
+            display: none;
+        }
+        #xj3 {
+            display: none;
+        }
+        #glide {
+            display: none;
+        }
+        body {
+          font-family: Arial;
+        }
+    </style>
+    <script>
+        function checkPassword() {
+            const passwordInput = document.getElementById('password').value;
+            const correctPassword1 = 'empty';
+            const correctPassword2 = 'xj3';
+            const correctPassword3 = 'glide';
+            const hiddenContent1 = document.getElementById('empty');
+            const hiddenContent2 = document.getElementById('xj3');
+            const hiddenContent3 = document.getElementById('glide');
+
+            if (passwordInput === correctPassword1) {
+                hiddenContent1.style.display = 'block';
+            } else if (passwordInput === correctPassword2) {
+              hiddenContent2.style.display = 'block';
+            } else if (passwordInput === correctPassword3) {
+              hiddenContent3.style.display = 'block';
+            } else {
+                alert('Incorrect project code. Please try again.');
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Experiment Dashboard</h1>
+    <p>Please enter a project code to continue.</p>
+    <input type="password" id="password" placeholder="Enter project code">
+    <button onclick="checkPassword()">Submit</button>
+
+    <div id="empty">
+        <br>
+        <br>
+        <h2>Project: Empty</h2>
+        <h4>Status: Paused</h4>
+        <p>Project Empty is focused on easily making near perfect vacuums, free of almost all matter.</p>
+        <p>The current plan is to design a handheld tool that selects an area and moves all matter in that area outside.</p>
+        <p>The area would remain empty until the tool was toggles again.</p>
+        <p>Research has been on and off, only working on it as a sort of side project when everything else is done.</p>
+    </div>
+    <div id="xj3">
+        <br>
+        <br>
+        <h2>Project: Classified</h2>
+        <h4>Status: Classified</h4>
+        <p>The data retrieval service you are using does not permit access to this data.</p>
+    </div>
+    <div id="glide">
+        <br>
+        <br>
+        <h2>Project: Glide</h2>
+        <h4>Status: Archived</h4>
+        <i><p>Notice: Project Glide has been put on hold indefinitly, and will not have any further work done on it.</p></i>
+        <p>Project Glide was focused on making a minimal friction surface, designed to almost not affect motion on it at all.</p>
+        <p>It was a primary project here at Parallel Labratories, and similar projects had been worked on at other companies.</p>
+        <p>Much like other companies, it was deemed too difficult to make a frictionless medium relative to rewards from it, and was discontinued.</p>
+    </div>
+</body>
+</html>
